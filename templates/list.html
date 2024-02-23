@@ -1,9 +1,15 @@
-{% load static %}
-<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% extends 'base.html' %}
 
+
+{% block content %}
 {% for item in object_list %}
 <ul class="list-none">
-  <li class="text-lg">{{ item.title }}</li>
-  <li>{{ item.memo }}</li>
+  <li class="text-lg text-blue-600 py-5">
+    {{ item.title }}
+    <a href="#" class="w-2 h-2 bg-red-500 text-gray-500">編集</a>
+    <a href="#">削除</a>
+    <a href="#">詳細</a>
+  </li>
 </ul>
 {% endfor %}
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    {% comment %} <link href="{% static 'css/style.css' %}" rel="stylesheet" /> {% endcomment %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tailwind.css' %}" />
+
+    <title>Todo</title>
+  </head>
+  <body>
+    {% block header %} 
+    {% endblock header%} 
+    {% block content %} 
+    {% endblock content %}
+  </body>
+</html>
