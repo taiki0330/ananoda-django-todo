@@ -1,5 +1,9 @@
-{% load static %}
-<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% extends 'base.html' %}
 
-<h3 class="text-blue-400 text-lg">{{ object.title }}</h3>
-{{ object.memo }}
+
+
+{% block content %}
+<p class="text-lg">{{ object.title }}</p>
+<p>{{ object.memo }}</p>
+<p>{{ object.duedate }}</p>
+{% endblock content %}

@@ -2,13 +2,14 @@
 
 
 {% block content %}
+<a href="{% url 'create' %}" class="w-2 h-2 bg-amber-600 text-gray-200 py-2 px-4 rounded">新規作成</a>
 {% for item in object_list %}
 <ul class="list-none">
-  <li class="text-lg text-blue-600 py-5">
-    <p>{{ item.title }}   期日：{{ item.duedate }}</p>
-    <a href="{% url 'update' item.pk %}" class="w-2 h-2 bg-blue-500 text-gray-200 py-2 px-4">編集</a>
-    <a href="{% url 'delete' item.pk %}" class="w-2 h-2 bg-red-600 text-gray-200 py-2 px-4">削除</a>
-    <a href="{% url 'detail' item.pk %}" class="w-2 h-2 bg-green-400 text-gray-200 py-2 px-4">詳細</a>
+  <li class="text-lg text-blue-600 py-5 bg-gray-200 my-3 px-3">
+    <p class="mb-4">{{ item.title }}   期日：{{ item.duedate }}</p>
+    <a href="{% url 'update' item.pk %}" class="w-2 h-2 bg-blue-500 text-gray-200 py-2 px-4 rounded">編集</a>
+    <a href="{% url 'delete' item.pk %}" class="w-2 h-2 bg-red-600 text-gray-200 py-2 px-4 rounded">削除</a>
+    <a href="{% url 'detail' item.pk %}" class="w-2 h-2 bg-green-400 text-gray-200 py-2 px-4 rounded">詳細</a>
   </li>
 </ul>
 {% endfor %}
