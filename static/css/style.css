@@ -498,6 +498,9 @@ video {
 .block {
   display: block;
 }
+.flex {
+  display: flex;
+}
 .h-2 {
   height: 0.5rem;
 }
@@ -506,6 +509,15 @@ video {
 }
 .list-none {
   list-style-type: none;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
 }
 .border {
   border-width: 1px;

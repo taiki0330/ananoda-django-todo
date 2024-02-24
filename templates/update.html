@@ -3,10 +3,12 @@
 
 {% block content %}
 <form action="" method="POST" class="border">{% csrf_token %}
-    {{ form.title }}
-    {{ form.memo }}
-    {{ form.priority }}
-    {{ form.duedate }}
+    <div class="flex flex-col items-center justify-center">
+        {{ form.title }}
+        {{ form.memo }}
+        {{ form.priority }}
+        {{ form.duedate }}
+    </div>
 <input type="submit" class="bg-blue-400 py-2 px-4 " value="更新する">
 </form>
 {% endblock content %}
